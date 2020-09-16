@@ -1,0 +1,27 @@
+/*
+Split out from coreos.css
+Contains all base element styles.
+*/
+
+button:focus,
+a:focus {
+  outline-style: none; }
+
+ul,
+ol {
+  padding-left: 20px; }
+
+dl {
+  margin: 0px; }
+
+dt {
+  text-transform: uppercase;
+  font-weight: 400;
+  color: $color-text-secondary;
+  font-size: 12px; }
+
+dd {
+  margin-bottom: 20px; }
+
+dd:last-child {
+  margin-bottom: 0px; }

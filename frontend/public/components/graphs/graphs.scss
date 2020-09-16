@@ -1,0 +1,16 @@
+.graph-wrapper {
+  padding-top: 15px; // So graph title doesn't abut border
+  margin-top: 0;
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+
+.graph-title {
+  margin: 0;
+  text-align: center;
+  color: black;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 1.4; // so descenders don't clip
+}

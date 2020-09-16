@@ -1,0 +1,27 @@
+.co-m-status {
+  text-align: right;
+}
+
+.co-m-status__icon {
+  padding-right: 5px;
+}
+
+.co-m-status--critical {
+  color: $red-dark;
+}
+
+.co-m-status--ok {
+  color: $green;
+}
+
+.co-m-status--warning {
+  color: $orange;
+}
+
+.co-m-status--unknown {
+  color: $co-gray;
+}
+
+.co-m-status--access-denied {
+  color: $co-gray;
+}

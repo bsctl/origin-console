@@ -1,0 +1,134 @@
+$height: 18px;
+
+.co-m-resource-icon {
+  display: inline-block;
+  font-size: $font-size-base - 1;
+  font-weight: normal;
+  text-align: center;
+  border-radius: 10px;
+  height: $height;
+  min-width: $height;
+  padding: 0 4px;
+  line-height: $height;
+  color: #fff;
+  margin: 0 4px;
+  background-color: $color-container-dark;
+  &--lg {
+    border-radius: 12px;
+    font-size: 16px;
+    height: 24px;
+    line-height: 24px;
+    margin-left: 0;
+    margin-right: 7px;
+    min-width: 24px;
+    padding: 0 7px;
+    position: relative;
+    top: 4px;
+  }
+}
+
+.co-resource-icon--fixed-width {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 40px;
+}
+
+.co-m-resource-clusterrole,
+.co-m-resource-role {
+  background-color: $color-rbac-role-dark;
+}
+
+.co-m-resource-clusterrolebinding,
+.co-m-resource-rolebinding {
+  background-color: $color-rbac-binding-dark;
+}
+
+.co-m-resource-daemonset,
+.co-m-resource-deployment,
+.co-m-resource-deploymentconfig,
+.co-m-resource-job,
+.co-m-resource-petset,
+.co-m-resource-replicaset,
+.co-m-resource-replicationcontroller {
+  background-color: $color-pod-overlord;
+}
+
+.co-m-resource-node,
+.co-m-resource-policy {
+  background-color: $color-node-dark;
+}
+
+.co-m-resource-configmap {
+  background-color: $color-configmap-dark;
+}
+
+.co-m-resource-container {
+  background-color: $color-container-dark;
+}
+
+.co-m-resource-pod {
+  background-color: $color-pod-dark;
+}
+
+.co-m-resource-namespace,
+.co-m-resource-project {
+  background-color: $color-namespace-dark;
+}
+
+.co-m-resource-secret {
+  background-color: $color-secret-dark;
+}
+
+.co-m-resource-alertmanager {
+  background-color: $color-alertmanager-dark;
+}
+
+.co-m-resource-service {
+  background-color: $color-service-dark;
+}
+
+.co-m-resource-serviceaccount {
+  background-color: $color-serviceaccount-dark;
+}
+
+.co-m-resource-ingress {
+  background-color: $color-ingress-dark;
+}
+
+.co-m-resource-icon--all {
+  background-color: black;
+}
+
+.co-m-resource-icon--align-left {
+  margin-left: 0;
+}
+
+.co-m-resource-icon--flex-child {
+  margin-right: 7px;
+}
+
+.co-resource-link {
+  align-items: baseline;
+  display: flex;
+  min-width: 0; // required so co-break-word works
+  @include co-break-word;
+  &--inline {
+    display: inline-flex;
+    margin: 0 20px 0 0;
+  }
+  &__resource-name {
+    min-width: 0; // required so co-break-word works
+  }
+  .co-m-resource-icon {
+    flex-shrink: 0;
+  }
+}
+
+.co-resource-link-wrapper {
+  display: flex;
+}
+
+.co-m-selector {
+  @include co-break-word;
+}

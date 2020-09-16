@@ -1,0 +1,26 @@
+$global-notification-text: #fff;
+
+.co-global-notification {
+  background-color: #0088ce;
+  color: $global-notification-text;
+  text-align: center;
+
+  a {
+    color: $global-notification-text;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}
+
+.co-global-notification__text {
+  margin: 0;
+}
+
+.co-global-notification__impersonate-name {
+  font-weight: 600;
+}
+
+.co-global-notification__impersonate-kind {
+  font-weight: 500;
+  padding-right: 20px;
+}

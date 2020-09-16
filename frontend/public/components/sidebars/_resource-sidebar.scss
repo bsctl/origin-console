@@ -1,0 +1,33 @@
+.co-resource-sidebar-header {
+  margin: 0;
+}
+
+.co-resource-sidebar-list {
+  padding-left: 15px;
+}
+
+.co-resource-sidebar-item {
+  border-top: 1px solid #ccc;
+  padding: 20px 0;
+
+  &:first-child {
+    border-top: 0;
+  }
+}
+
+.co-resource-sidebar-item__header {
+  font-weight: 600;
+}
+
+.co-resource-sidebar-item__details {
+  margin: 0;
+  padding: 25px 0;
+}
+
+.co-resource-sidebar-item__img {
+  padding: 20px 0;
+}
+
+.co-role-sidebar-subheader {
+  font-weight: normal;
+}

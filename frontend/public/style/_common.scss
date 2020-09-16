@@ -1,0 +1,320 @@
+.co-m-pane__body {
+  border-bottom: 1px solid $color-grey-background-border;
+  margin: $grid-gutter-width 0 0;
+  padding: 0 ($grid-gutter-width / 2) $grid-gutter-width;
+  @media (min-width: $screen-sm-min) {
+    padding-left: $grid-gutter-width;
+    padding-right: $grid-gutter-width;
+  }
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+
+.co-m-pane__filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px ($grid-gutter-width / 2);
+  @media (min-width: $grid-float-breakpoint) {
+    margin-left: $grid-gutter-width;
+    margin-right: $grid-gutter-width;
+    margin-top: $grid-gutter-width;
+  }
+  .btn-group,
+  .co-m-primary-action,
+  .form-control {
+    margin-bottom: 10px;
+  }
+  .btn-group {
+    margin-right: 10px;
+    min-width: 0; // enables truncation of selected item, if needed
+  }
+  &--alt {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  &--group__body {
+    margin-top: 0;
+    padding-top: $grid-gutter-width;
+  }
+}
+
+.co-m-pane__filter-bar-group {
+  display: flex;
+  flex: 1 1 auto;
+  flex-wrap: wrap;
+  min-width: 0;
+}
+
+.co-m-pane__filter-bar-group--filter {
+  @media(min-width: $screen-xs-min) {
+    flex: 1 1 auto;
+    justify-content: flex-end;
+  }
+}
+
+.co-m-pane__filter-bar-group--filters {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  .btn-group {
+    display: flex;
+  }
+  .co-m-pane__filter-bar-group + & {
+    flex-grow: 0;
+  }
+}
+
+.co-m-pane__heading {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 $grid-gutter-width;
+  &--center {
+    justify-content: center;
+  }
+  &--logo {
+    align-items: center;
+    margin-bottom: ($grid-gutter-width / 2);
+  }
+}
+
+.co-m-pane__name {
+  @include co-break-word;
+  flex: 1;
+  margin-right: 10px;
+  min-width: 0; // necessary for wrapping since its a flex child
+}
+
+.co-inline-block {
+  display: inline-block;
+}
+
+.co-no-bold {
+  font-weight: normal;
+}
+
+.cos-error-title {
+  color: $red;
+}
+
+.co-section-heading {
+  display: flex;
+  font-size: 20px;
+  font-weight: 600;
+  justify-content: space-between;
+  margin: 0 0 20px 0;
+  &--contains-resource-icon {
+    align-items: center;
+    justify-content: flex-start;
+  }
+}
+
+.co-section-heading-secondary {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 30px 0;
+}
+
+.co-table-container {
+  overflow: auto;
+  margin-bottom: 30px;
+  table {
+    thead {
+      th {
+        color: $color-text-secondary;
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+.co-m-pane__details {
+  // TODO: refactor so <dl>s have margin-bottom by default
+  margin-bottom: 20px;
+  .co-detail-table__row & {
+    margin-bottom: 0;
+  }
+  dd {
+    font-size: 14px;
+    @include co-break-word;
+  }
+}
+
+.co-m-pane__explanation {
+  color: $color-grey-text;
+  margin-bottom: 30px;
+}
+
+.co-m-pane__explanation code {
+  background-color: $co-gray-lightest;
+  color: $co-gray;
+}
+
+.co-btn--download {
+  padding: 15px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.co-btn--download,
+.co-btn--download:hover {
+  border: 1px solid #DDDDDD;
+  border-radius: 2px;
+}
+
+.co-pre-line {
+  white-space: pre-line;
+}
+
+.co-pre-wrap {
+  white-space: pre-wrap;
+}
+
+.co-search {
+  padding-bottom: 30px;
+  .input-group-btn {
+    vertical-align: top;
+    @media(max-width: $grid-float-breakpoint-max) {
+      display: flex;
+      min-width: 0;
+      width: auto;
+      .co-type-selector {
+        width: 100%;
+      }
+    }
+  }
+  @media(max-width: $grid-float-breakpoint-max) {
+    .input-group-select {
+      display: block;
+      .btn--dropdown {
+        margin-bottom: 2px;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.co-well {
+  color: $blue-darker;
+  background-color: $blue-bg;
+  padding: 20px;
+  margin: 30px;
+}
+
+
+// Prevent iOS phones from zooming on form inputs
+@supports (-webkit-overflow-scrolling: touch) { // Target mobile Safari
+  @media (max-width: $grid-float-breakpoint-max) { // Target phones
+    input,
+    select,
+    .tag-item,
+    textarea {
+      font-size: 16px !important;
+    }
+  }
+}
+
+// Remove annoying default spinners browsers add to number fields.
+input[type=number] {
+  -moz-appearance: textfield;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.co-error {
+  color: $color-red-error;
+  white-space: nowrap;
+}
+
+.co-overflow-y-fade {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.error-message {
+  color: #fff;
+  font-size: 14px;
+  padding: 2px 12px;
+  background-color: #D64456;
+}
+
+.co-break-word {
+  @include co-break-word;
+}
+
+// append external-link icon to <a> so that it doesn't wrap without text
+// there must be no white space between the text and the closing </a> tag holding the pseudo element
+.co-external-link:after {
+  content: "\f08e";
+  display:inline-block;
+  font-family: 'FontAwesome';
+  font-size: 75%;
+  height: 16px;
+  position:relative;
+  margin-left: 5px;
+  margin-right: -25px; // width + margin-left
+  top:0;
+  width: 20px;
+}
+.co-external-link {
+  display: inline-block;
+  padding-right: 25px;
+}
+// Enable break word within co-m-table-grid
+.co-external-link--block {
+  display: block;
+}
+
+.co-toolbar {
+  align-items: stretch;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.co-toolbar__item {
+  max-width: 100%;
+  padding: 5px 0;
+  .btn-group {
+    max-width: 100%;
+  }
+}
+
+.co-toolbar__group {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  min-width: 0;
+
+  @media (max-width: $screen-xs-max) {
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+}
+
+.co-toolbar__group--left {
+  justify-content: flex-start;
+  .co-toolbar__item {
+    padding-right: 15px;
+  }
+  @media (max-width: $screen-xs-max) {
+    align-items: flex-start;
+  }
+}
+
+.co-toolbar__group--right {
+  justify-content: flex-end;
+  @media (min-width: $screen-xs-min) {
+    .co-toolbar__item {
+      padding-left: 15px;
+    }
+  }
+  @media (max-width: $screen-xs-max) {
+    align-items: flex-end;
+  }
+}

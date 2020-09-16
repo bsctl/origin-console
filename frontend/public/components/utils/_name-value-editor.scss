@@ -1,0 +1,68 @@
+.pairs-list__row {
+  padding-bottom: 15px;
+}
+
+.pairs-list__row-dragging {
+  padding-bottom: 15px;
+  opacity: 0
+}
+
+.pairs-list__value-field,
+.pairs-list__name-field {
+  padding-top: 5px;
+  padding-right: 0;
+}
+
+.pairs-list__value-pair-field {
+  padding-right: 0;
+  display: flex;
+  flex-direction: column;
+  @media(min-width: $screen-md-min) {
+    flex-direction: row;
+  }
+}
+
+.pairs-list__value-ro-field {
+  flex-grow: 1;
+  padding-top: 5px;
+}
+
+.pairs-list__btn {
+  cursor: pointer;
+  display: block;
+  @media(min-width: $screen-md-min) {
+    padding-right: 8px;
+    display: inline;
+  }
+}
+
+.pairs-list__side-btn {
+  cursor: pointer;
+  padding-right: 8px;
+}
+
+.pairs-list__action-divider {
+  display: none;
+  @media(min-width: $screen-md-min) {
+    display: inline;
+    padding-right: 10px;
+  }
+}
+
+.pairs-list__delete-icon {
+  line-height: 32px;
+}
+
+.pairs-list__reorder-icon {
+  line-height: 32px;
+  padding-right: 10px;
+  cursor: move;
+}
+
+.pairs-list__add-icon {
+  margin-right: 6px;
+}
+
+.pairs-list__span-btns {
+  white-space: pre;
+}

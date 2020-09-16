@@ -1,0 +1,129 @@
+// nav stuff
+$link-padding-left: 40px;
+$section-padding-left: 13px;
+$active-border: 3px;
+
+.co-m-nav-link {
+  display: block;
+  float: none;
+  font-size: 13px;
+  line-height: 23px;
+  overflow-x: hidden;
+  padding: 2px 0 2px $link-padding-left;
+  white-space: nowrap;
+
+  a {
+    background-color: inherit;
+    color: $color-os-nav-title;
+    display: inline-block;
+    text-decoration: none;
+    width: 100%;
+  }
+
+  &.active {
+    padding-left: $link-padding-left - $active-border;
+    background-color: #383F47;
+    border-left: $active-border solid $color-os-nav-border-left-active;
+    a {
+      color: #fff;
+    }
+  }
+
+  &:hover {
+   background-color: $color-os-nav-background-active;
+  }
+
+  &:focus {
+   background-color: transparent;
+  }
+}
+
+.co-m-nav-link__external a:after {
+  color: $color-os-nav-icon;
+}
+
+.navigation-container {
+  flex: 1 1 auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.navigation-container__list {
+  margin: -10px 0 10px 0;
+  overflow-y: hidden;
+  padding-left: 0;
+  transition: max-height 0.25s;
+}
+
+.navigation-container__section, .navigation-container__section__separator {
+  border-bottom: 1px solid $color-os-nav-item-seperator;
+}
+
+.navigation-container__section--active {
+  background-color: $color-os-nav-background-active;
+  position: relative;
+  &:before {
+    background: $color-os-nav-border-left-active;
+    content: "";
+    height: 100%;
+    position: absolute;
+    width: $active-border;
+  }
+}
+
+.navigation-container__section__separator {
+  margin: 8px 20px 8px 40px;
+}
+
+.navigation-container__section__title {
+  align-items: center;
+  color: $color-os-nav-title;
+  cursor: pointer;
+  display: flex;
+  font-size: 15px;
+  line-height: 20px;
+  padding: 20px 0px 20px $section-padding-left;
+  width: 100%;
+  img {
+    margin-right: 12px;
+    width: 15px;
+    &[src^="/static/assets/routing"] {
+      margin-left: -1px;
+      margin-right: 10px;
+      width: 18px;
+    }
+  }
+  span {
+    display: inline-block;
+    margin: 0 15px 0 11px;
+  }
+}
+.navigation-container__section__title__link,
+.navigation-container__section__title__link:hover,
+.navigation-container__section__title__link:focus  {
+  color: $color-os-nav-title;
+  cursor: pointer;
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+.navigation-container__section__title__icon {
+  color: $color-os-nav-icon;
+  margin-right: 9px;
+  width: 18px;
+  &.fa {
+    font-size: 15px;
+  }
+  &.fa-cog {
+    font-size: 18px;
+  }
+  &.fa-folder-open-o,
+  &.pficon-user {
+    font-size: 16px;
+  }
+}
+
+.navigation-container__section__title__icon--active {
+  color: $color-os-nav-border-left-active;
+}

@@ -1,0 +1,40 @@
+.cos-status-box {
+  padding: 20px;
+
+  &__title {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-align: center;
+
+    .cos-error-title {
+      color: $red;
+    }
+  }
+
+  &__detail {
+    color: $color-text-muted;
+    font-size: 14px;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  &__access-denied-icon {
+    margin: 10px;
+  }
+}
+
+.co-m-loader--inline {
+  display: inline-block;
+  margin: 0;
+  position: static;
+}
+
+.co-m-timeout-error {
+  margin-bottom: 30px;
+  text-align: center;
+  .co-cluster-updates__component &,
+  .co-m-vert-nav & {
+    margin-top: 30px;
+  }
+}

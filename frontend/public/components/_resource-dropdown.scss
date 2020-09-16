@@ -1,0 +1,13 @@
+.co-type-selector {
+  margin-right: -2px;
+  min-width: 0;
+  .dropdown-menu {
+    max-height: 75vh;
+    min-width: 290px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    a {
+      padding: 4px 20px 4px 6px;
+    }
+  }
+}

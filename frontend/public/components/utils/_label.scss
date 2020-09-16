@@ -1,0 +1,23 @@
+.co-m-label {
+  background-color: $color-grey-background;
+  border-radius: 12px;
+  border: 1px solid $color-grey-border;
+  display: inline-flex;
+  line-height: $co-m-label-line-height;
+  margin: 2px 2px 2px 0;
+  max-width: 100%;
+  padding: 0 8px;
+
+  &__key, &__value {
+    max-width: 60px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+.co-m-label-list:hover .co-m-label, .co-m-label--expand {
+  .co-m-label__key, .co-m-label__value {
+    max-width: 100%;
+  }
+}

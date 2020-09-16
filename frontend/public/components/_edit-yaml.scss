@@ -1,0 +1,31 @@
+.yaml-editor-header {
+  border-bottom: 1px solid #ddd;
+  font-size: 16px;
+  height: 45px;
+  padding: 10px 20px;
+}
+
+.yaml-editor {
+  position: relative;
+}
+
+.yaml-editor--flexbox {
+  display: flex;
+  flex-direction: column;
+}
+
+.yaml-editor--acebox {
+  flex: 1;
+}
+
+.yaml-editor--buttons {
+  background: white;
+  border-top: 1px solid #ddd;
+  padding: 20px ($grid-gutter-width / 2);
+  margin-top: auto;
+  z-index: 10;
+  @media (min-width: $grid-float-breakpoint) {
+    padding-left: $grid-gutter-width;
+    padding-right: $grid-gutter-width;
+  }
+}

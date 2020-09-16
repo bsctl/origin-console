@@ -1,0 +1,202 @@
+$color-dark-border: #ddd;
+
+.co-sysevent-stream {
+  padding: 60px 0 50px 0;
+  position: relative;
+}
+
+.slide-entering {
+  left: 100%;
+  opacity: 0;
+}
+
+.slide-entered {
+  left: 0;
+  opacity: 1;
+  transition: all 0.5s;
+}
+
+.co-sysevent-stream__connection-error {
+  color: $color-red-error;
+}
+
+.co-sysevent-stream__timeline {
+  bottom: 30px;
+  position: absolute;
+  top: 35px;
+}
+
+.co-sysevent-stream__status {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 9px;
+  left: 40px;
+  right: 4px;
+  @media(min-width: $screen-sm-min) {
+    padding-left: 25px;
+    left: 45px;
+    right: 0;
+  }
+}
+
+.co-sysevent-stream__status-box-empty {
+  border-style: solid;
+  border-color: $color-grey-border;
+  border-width: 1px 0;
+}
+
+.co-sysevent-stream__timeline__end-message {
+  bottom: 0;
+  position: absolute;
+  transform: translateY(50%);
+  white-space: nowrap;
+  z-index: 1;
+  .co-sysevent-stream__timeline--empty & {
+    display: none;
+  }
+}
+
+.co-sysevent-stream__timeline__btn {
+  margin: 0;
+  transform: translate(0%, -100%);
+  margin-left: 2px;
+}
+
+.co-sysevent {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  height: 120px;
+  .co-m-resource-icon {
+    margin-left: 0;
+  }
+}
+
+.co-sysevent__box {
+  padding: 10px;
+  background-color: #fff; // prevent overlapping text if events overlap each other
+  border: solid 1px $color-dark-border;
+  border-bottom-color: $color-grey-border;
+  width: 100%;
+  flex: none;
+}
+
+.co-sysevent__details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.co-sysevent__resourcelink {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.co-sysevent__subheader {
+  display: flex;
+  justify-content: space-between;
+  white-space: pre;
+}
+
+.co-sysevent__source {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.co-sysevent__message {
+  @include co-break-word;
+  cursor: help;
+  margin-top: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 40px;
+  position: relative;
+}
+.co-sysevent__message:after {
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 50%);
+  bottom: 0;
+  content: "";
+  height: 25px;
+  position: absolute;
+  right: 0;
+  width: 15%;
+  text-align: right;
+}
+
+
+.co-sysevent__icon-box {
+  flex: 0 0 100px;
+  display: none;
+  position: relative;
+  .co-sysevent-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(calc(50% - 17px), calc(-50% + 1px));
+  }
+}
+
+.co-sysevent__icon-line {
+  background-color: $color-grey-border;
+  height: 3px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+}
+
+/* The AutoSizer/VirtualList height change kicks in here. This is meant to handle the remainder of the mobile view (which has a shorter row height). */
+@media(min-width: 508px) {
+  .co-sysevent {
+    height: 95px;
+  }
+
+  .co-sysevent__message {
+    height: 25px;
+  }
+}
+
+@media(min-width: $grid-float-breakpoint) {
+  .co-sysevent {
+    flex-wrap: nowrap;
+    margin-left: -40px;
+  }
+
+  .co-sysevent__box {
+    padding: 10px 10px 0 10px;
+    flex: 1 2 auto;
+    border: solid 1px $color-grey-border;
+    min-width: 0%; // necessary for wrapping since its a flex child
+  }
+
+  .co-sysevent__icon-box {
+    display: block;
+  }
+
+  .co-sysevent-stream {
+    padding-top: 50px;
+    padding-left: 10px;
+  }
+
+  .co-sysevent-stream__timeline {
+    border-bottom: 3px solid $color-grey-border;
+    border-left: 3px solid $color-grey-border;
+    margin-left: 10px;
+    &--empty {
+      border: 0;
+    }
+  }
+
+  .co-sysevent-stream__timeline__btn {
+    transform: translate(-50%, -100%);
+    margin-left: -2px;
+  }
+
+  .co-sysevent-stream__timeline__end-message {
+    left: 45px;
+  }
+}
